@@ -1,0 +1,25 @@
+class Box {
+  init(value) {
+    this.value = value;
+  }
+
+  read() {
+    return this.value;
+  }
+}
+
+var box = Box(7);
+var read = box.read;
+
+print read();
+print box.init(8) == box;
+print read();
+
+class Early {
+  init() {
+    return;
+  }
+}
+
+var early = Early();
+print early.init() == early;

@@ -1,0 +1,34 @@
+var n = 0;
+var total = 0;
+
+while (n < 6) {
+  n = n + 1;
+  if (n == 2) continue;
+  if (n == 5) break;
+  total = total + n;
+}
+
+print total;
+
+total = 0;
+var increments = 0;
+
+for (var i = 0; i < 6; i = i + 1, increments = increments + 1) {
+  if (i == 2) continue;
+  if (i == 5) break;
+  total = total + i;
+}
+
+print total;
+print increments;
+
+var visits = 0;
+
+for (var outer = 0; outer < 2; outer = outer + 1) {
+  for (var innerIndex = 0; innerIndex < 3; innerIndex = innerIndex + 1) {
+    if (innerIndex == 1) continue;
+    visits = visits + 1;
+  }
+}
+
+print visits;

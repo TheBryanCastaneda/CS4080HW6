@@ -1,0 +1,7 @@
+class Bad {
+  init() {
+    return 123;
+  }
+}
+
+Bad();

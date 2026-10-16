@@ -1,0 +1,26 @@
+class Parent {
+  run() {
+    print "Testing the parent method.";
+    inner();
+    print "Parent finished.";
+  }
+}
+
+class Middle < Parent {
+  run() {
+    print "Middle class scholarship.";
+    inner();
+    print "Middle class scholarship again.";
+  }
+}
+
+class Gap < Middle {}
+
+class Child < Gap {
+  run() {
+    print "Chicken nuggets.";
+    inner();
+  }
+}
+
+Child().run();

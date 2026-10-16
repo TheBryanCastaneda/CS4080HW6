@@ -1,0 +1,8 @@
+continue;
+
+while (false) {
+  fun invalid() {
+    continue;
+  }
+  invalid();
+}

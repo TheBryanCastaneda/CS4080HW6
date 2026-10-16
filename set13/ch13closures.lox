@@ -1,0 +1,22 @@
+fun makeClass(value) {
+  class Parent {
+    score() {
+      fun refine() {
+        return inner();
+      }
+
+      return refine() + value;
+    }
+  }
+
+  class Child < Parent {
+    score() {
+      return 2;
+    }
+  }
+
+  return Child;
+}
+
+var Example = makeClass(5);
+print Example().score();

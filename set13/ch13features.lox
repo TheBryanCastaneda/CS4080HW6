@@ -1,0 +1,41 @@
+class Base {
+  init(value) {
+    this.value = value;
+  }
+
+  amount {
+    return this.value;
+  }
+
+  score(n) {
+    return inner(n) + 1;
+  }
+
+  locked() {
+    print "Testing the parent method.";
+  }
+
+  class doubled {
+    return this.factor * 2;
+  }
+}
+
+class Child < Base {
+  score(n) {
+    return n * 2;
+  }
+
+  locked() {
+    print "Chicken nuggets.";
+  }
+}
+
+var item = Child(6);
+item.locked();
+
+var score = item.score;
+print score(3);
+print item.amount;
+
+Child.factor = 5;
+print Child.doubled;
